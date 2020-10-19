@@ -105,9 +105,13 @@ a:hover {
   align-items: center;
 }
 
-.logoAbout {
-  height: 150px;
-}
+ .logoNodeJS {
+    height: 180px;
+  }
+
+  .logoMongoDB {
+    height: 140px;
+  }
 
 /* Contact Page */
 
@@ -122,12 +126,13 @@ a:hover {
 }
 
 .logos {
+  text-align: center;
   padding: 20px 30px 30px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 60%;
 }
 
 .gmail {

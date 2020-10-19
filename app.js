@@ -85,8 +85,6 @@ app.post('/compose', (req, res) => {
     textDate: textDate,
     date: numberDate,
   });
-console.log(newPost);
-
   newPost.save(err => {
     if (!err) {
       res.redirect('/');
