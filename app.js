@@ -44,9 +44,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 const homeStartingContent =
-  'This is a minimalistic blogpost website. I hope you enjoy the content on it. Feel free to compose a new post and publish it to this Journal. Thank you!';
-const aboutContent = `Created as an exercise in a Webdeveloper course. I set up a server using Node.js/Express with ejs templates to render the pages. The posts are stored in a MongoDB database and are managed by the ODM Mongoose`;
-const contactContent = `My name is Rama Sabajo. living in Amsterdam. At the moment I'm looking for a job opportunity to grow as a front-end developer. Feel free to contact me`;
+  'Welcome to this simple blogpost website. Feel free to compose a new post and publish it to this Journal. Thank you!';
+const aboutContent = `Created as an exercise in a Webdeveloper course. I've set up a server using Node.js/Express with ejs templates to render the pages. The posts are stored in a MongoDB database and are managed by the ODM Mongoose`;
+const contactContent = `My name is Rama Sabajo. living in Amsterdam. At the moment I'm looking for a job opportunity to grow as a front-end developer. Feel free to contact me.`;
 
 app.get('/', (req, res) => {
   Post.find({}, (err, foundPosts) => {
