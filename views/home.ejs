@@ -9,16 +9,18 @@
 <div class="postsBox">
 <% posts.forEach((post) => { %>
   <div class="post">
+    
     <h3><a href="/posts/<%= post._id %>"><%= post.title %></a></h3>
     <p class="authorDate">Written by <%= post.author %> - <%= post.textDate %></p>
 <% if (post.body.length > 100) {  %>
-    <div class="postBody"><%= post.body.substring(0, 50) + ' ...' %> <br> <a href="/posts/<%= post._id %>">Read More</a></div>
+    <div class="postBody"><%= post.body.substring(0, 40) + ' ...' %> <a href="/posts/<%= post._id %>">Read More</a></div>
     
 <% }  else { %>
   <div class="postBody"> <%= post.body %> </div> 
     
 <%  }  %>
     <hr >
+  
   </div>
 <% }) %>
 </div>
