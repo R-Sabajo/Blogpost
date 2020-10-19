@@ -1,0 +1,32 @@
+<%- include('partials/header') -%>
+<div class="titleBox">
+<h1 class="title">Start writing here</h1>
+<p><%= startingContent %></p>
+</div>
+
+<h2 class="subtitle">Recent posts</h2>
+
+<div class="postsBox">
+<% posts.forEach((post) => { %>
+  <div class="post">
+    <h3><a href="/posts/<%= post._id %>"><%= post.title %></a></h3>
+    <p class="authorDate">Written by <%= post.author %> - <%= post.textDate %></p>
+<% if (post.body.length > 100) {  %>
+    <div class="postBody"><%= post.body.substring(0, 100) + ' ...' %><a href="/posts/<%= post._id %>">Read More</a></div>
+    
+<% }  else { %>
+  <div class="postBody"> <%= post.body %> </div> 
+    
+<%  }  %>
+    <hr >
+  </div>
+<% }) %>
+</div>
+
+<div class="compose">
+  <a  class="btn btn-primary btn-lg compose" href="/compose">Compose new Post</a>
+</div>
+
+
+<%- include('partials/footer') -%> 
+
