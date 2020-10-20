@@ -7,7 +7,7 @@ const ejs = require('ejs');
 const _ = require('lodash');
 const mongoose = require('mongoose');
 mongoose.connect(
-  'mongodb+srv://admin-rama:Milano7137@cluster0.j1tz7.gcp.mongodb.net/blogPostDB',
+  'mongodb+srv://BlogUser:Journ@l01@cluster0.j1tz7.gcp.mongodb.net/blogPostDB',
   { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
