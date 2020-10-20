@@ -3,9 +3,8 @@
 }
 
 body::-webkit-scrollbar {
-    width: 1em;
+  width: 1em;
 }
-
 
 body {
   box-sizing: border-box !important;
@@ -13,14 +12,13 @@ body {
 
 a {
   color: #333;
-  
 }
 
-a:hover, a:active  {
+a:hover,
+a:active {
   text-decoration: none;
   color: var(--steel-blue);
 }
-
 
 ::placeholder {
   color: #999 !important;
@@ -64,6 +62,7 @@ a:hover, a:active  {
 
 .title {
   font-size: 1.8rem;
+  margin-bottom: 20px;
 }
 
 .subtitle {
@@ -71,6 +70,7 @@ a:hover, a:active  {
   margin-bottom: 20px;
   font-size: 1.6rem;
 }
+
 
 /* Content */
 
@@ -82,22 +82,43 @@ a:hover, a:active  {
   padding: 2% 4% 0%;
 }
 
+
 .postsBox {
   height: 50%;
   overflow-y: auto;
   margin-bottom: 30px;
   padding: 0 2%;
-  
+}
+
+.postBackground {
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 110%;
+  opacity: 0.2;
+  transition: opacity 150ms ease-in-out;
+}
+
+.postBackground:hover {
+  opacity: 0.1;
+  transition: opacity 150ms ease-in-out;
 }
 
 .post {
+  position: relative;
   border: 1px solid #eee;
   border-radius: 10px;
   margin: 10px 0;
   padding: 10px;
-  background-image: linear-gradient(to bottom,#fff, #f3f3f3 ); 
+  background-image: linear-gradient(to bottom, #fff, #f3f3f3);
   width: 100%;
-  
+  overflow: hidden;
+  transition: box-shadow 250ms ease-in-out;
+}
+
+.post:hover  {
+  box-shadow: 0px 3px 5px #777;
+  transition: box-shadow 250ms ease-in-out;
 }
 
 .post h3 {
@@ -124,13 +145,13 @@ a:hover, a:active  {
   align-items: center;
 }
 
- .logoNodeJS {
-    height: 180px;
-  }
+.logoNodeJS {
+  height: 180px;
+}
 
-  .logoMongoDB {
-    height: 140px;
-  }
+.logoMongoDB {
+  height: 140px;
+}
 
 /* Contact Page */
 
@@ -173,8 +194,6 @@ a:hover, a:active  {
 .github {
   height: 50px;
 }
-
-
 
 /* Footer */
 
@@ -251,17 +270,16 @@ a:hover, a:active  {
     height: 60%;
     max-width: 100%;
     overflow-y: auto;
-    margin-bottom: 30px;    
+    margin-bottom: 30px;
   }
 
   .post {
-  border: 1px solid #eee;
-  border-radius: 20px;
-  margin: 30px 0;
-  padding: 20px;
-  background-image: linear-gradient(to bottom,#fff, #f3f3f3 ); 
-  width: 100%;
-  
+    border: 1px solid #eee;
+    border-radius: 20px;
+    margin: 30px 0;
+    padding: 20px;
+    background-image: linear-gradient(to bottom, #fff, #f3f3f3);
+    width: 100%;
   }
 
   .post h3 {

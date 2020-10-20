@@ -8,13 +8,14 @@
 
 <div class="postsBox">
 <% posts.forEach((post) => { %>
-  
   <div class="post">
+    <a href="/posts/<%= post._id %>">
+      <img class="postBackground" src="/img/postBackground2.jpg" alt="Post background image">
     
     <h3><a href="/posts/<%= post._id %>"><%= post.title %></a></h3>
     <p class="authorDate">Written by <%= post.author %> </p>
 <% if (post.body.length > 100) {  %>
-    <div class="postBody"><%= post.body.substring(0, 40) + ' ...' %> <a href="/posts/<%= post._id %>">Read More</a></div>
+    <div class="postBody"><%= post.body.substring(0, 100) + ' ...' %></div>
     
 <% }  else { %>
   <div class="postBody"> <%= post.body %> </div> 
@@ -23,7 +24,7 @@
     
   
   </div>
- 
+</a>
 <% }) %>
 </div>
 
