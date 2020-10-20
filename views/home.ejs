@@ -1,12 +1,17 @@
 <%- include('partials/header') -%>
-<div class="titleBox">
-<h1 class="title">Start writing here</h1>
+<div class="row homeRow">
+<div class="titleBox col-lg-4">
+
+<h1 class="title">Start blogging</h1>
 <p><%= startingContent %></p>
+<div>
+  <a  class="btn btn-primary btn-lg compose" href="/compose">Compose</a>
 </div>
-
-<h2 class="subtitle">Recent posts</h2>
-
-<div class="postsBox">
+</div>
+<div class="col-lg-8 postCol">
+  
+  <h2 class="subtitle">Recent posts</h2>
+  <div class="postsBox">
 <% posts.forEach((post) => { %>
   <div class="post">
     <a href="/posts/<%= post._id %>">
@@ -27,10 +32,9 @@
 </a>
 <% }) %>
 </div>
-
-<div>
-  <a  class="btn btn-primary btn-lg compose" href="/compose">Compose</a>
 </div>
+</div>
+
 
 
 <%- include('partials/footer') -%> 
