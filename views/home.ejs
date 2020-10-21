@@ -1,5 +1,5 @@
 <%- include('partials/header') -%>
-<div class="row homeRow">
+
 <div class="titleBox col-lg-4">
 
 <h1 class="title">Start blogging</h1>
@@ -8,9 +8,10 @@
   <a  class="btn btn-primary btn-lg compose" href="/compose">Compose</a>
 </div>
 </div>
-<div class="col-lg-8 postCol">
-  
-  <h2 class="subtitle">Recent posts</h2>
+
+  <div class="col-lg-8 postCol">
+
+<h2 class="subtitle">Recent posts</h2>
   <div class="postsBox">
 <% posts.forEach((post) => { %>
   <div class="post">
@@ -31,7 +32,6 @@
   </div>
 </a>
 <% }) %>
-</div>
 </div>
 </div>
 

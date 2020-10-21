@@ -77,7 +77,8 @@ app.get('/compose', (req, res) => {
 app.post('/compose', (req, res) => {
   const numberDate = date.getDateNumber();
   const textDate = date.getDateText();
-
+console.log(textDate);
+console.log(numberDate);
   const newPost = new Post({
     title: req.body.postTitle,
     body: req.body.postBody,
